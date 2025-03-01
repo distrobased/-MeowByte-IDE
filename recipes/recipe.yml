@@ -20,9 +20,12 @@ modules:
   - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
+      - https://pypi.org
     install:
       - micro
       - starship
+      - python
+      - Visual Studio Code
     remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
@@ -36,6 +39,7 @@ modules:
       install:
         - org.mozilla.firefox
         - org.gnome.Loupe
+        - org.psf.python
       remove:
         - org.gnome.eog
     user: {} # Also add Flathub user repo, but no user packages
